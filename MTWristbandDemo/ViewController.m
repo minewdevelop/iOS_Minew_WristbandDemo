@@ -13,6 +13,7 @@
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     MTWristbandCentralManager *central;
+    MTWristbandPeripheral *p;
     NSArray<MTWristbandPeripheral*> *deviceAry;
     UITableView *deviceTable;
     UITextField *textF;
@@ -97,7 +98,7 @@
 - (void)connectToDevice:(MTWristbandPeripheral *)per {
     [central stopScan];
     [central connectToPeriperal:per];
-    [per.connector didChangeConnection:^(MTWristbandPeripheral * _Nonnull device, Connection connection) {
+    [per.connector didChangeConnection:^(Connection connection) {
         if (connection == Disconnected) {
             NSLog(@"the device has disconnected.");
         }
@@ -109,9 +110,9 @@
         }
         else if (connection == Validating) {
             NSLog(@"the device has validating");
-            MTWristbandPeripheral *p = per;
+            self->p = per;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self writePassword:p];
+                [self writePassword:self->p];
             });
 //            [self pushAlert:self->deviceAry[indexPath.row]];
         }
@@ -138,11 +139,121 @@
         [data getBytes:&value length:1];
         if (data && value == 0) {
             NSLog(@"password is right");
-            //then do what you want to.
+            //then do what you want to.for example:
+            [self readWarningHistory:device];
         }
         else {
             NSLog(@"password is error");
         }
+    }];
+}
+
+- (void)readWarningHistory:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readWarningHistoryWithBegain:0 End:per.broadcast.totalNum-1];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readWarningHistory success!");
+        }else {
+            NSLog(@"write readWarningHistory failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data.length == 1 && value == 0) {
+            NSLog(@"Command sent successfully");
+            return;
+        }
+        //Each piece of data is 16, When the total number of data is equal to the totalNum of broadcasted data, the data reception is complete.
+        if (data.length % 16 != 0) {
+            for (NSInteger k = 0; k<(data.length-14)/16; k++) {
+                [self dealHistoryData:[data subdataWithRange:NSMakeRange(k*16+14, 16)]];
+            }
+        }
+        else {
+            for (NSInteger k = 0; k<(data.length)/16; k++) {
+                [self dealHistoryData:[data subdataWithRange:NSMakeRange(k*16, 16)]];
+            }
+        }
+    }];
+}
+
+- (void)readTempHistory:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readTempHistoryWithBegain:0 End:per.broadcast.tempTotalNum-1];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readTempHistory success!");
+        }else {
+            NSLog(@"write readTempHistory failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data.length == 1 && value == 0) {
+            NSLog(@"Command sent successfully");
+            return;
+        }
+        //Each piece of data is 8, When the total number of data is equal to the tempTotalNum of broadcasted data, the data reception is complete.
+        if (data.length % 8 != 0) {
+            for (NSInteger k = 0; k<(data.length-14)/8; k++) {
+                [self dealHistoryData:[data subdataWithRange:NSMakeRange(k*8+14, 8)]];
+            }
+        }
+        else {
+            for (NSInteger k = 0; k<(data.length)/8; k++) {
+                [self dealHistoryData:[data subdataWithRange:NSMakeRange(k*8, 8)]];
+            }
+        }
+    }];
+}
+
+- (void)reset:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils resetDevice];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write reset success!");
+        }else {
+            NSLog(@"write reset failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"reset successfully");
+        }
+        else {
+            NSLog(@"reset failed,error:%hhu",value);
+        }
+    }];
+}
+
+- (void)setPowerOff:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils setPowerOff];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setPowerOff success!");
+        }else {
+            NSLog(@"write setPowerOff failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setPowerOff successfully");
+        }
+        else {
+            NSLog(@"setPowerOff failed,error:%hhu",value);
+        }
+    }];
+}
+
+
+- (void)dealHistoryData:(NSData *)d {
+    [MTUtils dealWithWarningHistory:d andHandler:^(NSString * _Nonnull mac, NSString * _Nonnull rssi, NSTimeInterval time) {
+        NSLog(@"every data------->%@ || %@ || %f",mac,rssi,time);
     }];
 }
 

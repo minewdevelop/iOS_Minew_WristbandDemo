@@ -27,7 +27,7 @@ typedef void(^MTCOperationBlock)(BOOL success, NSError *error);
 
 typedef void(^WriteCompletion)(BOOL success, NSError *error);
 typedef void(^ReceiveCompletion)(NSData *data);
-typedef void(^ConnectionChangeCompletion)(MTWristbandPeripheral *device, Connection connection);
+typedef void(^ConnectionChangeCompletion)(Connection connection);
 
 @interface MTWristbandConnection : NSObject
 

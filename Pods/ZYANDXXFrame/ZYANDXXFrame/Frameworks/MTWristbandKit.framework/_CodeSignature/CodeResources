@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/MTUtils.h</key>
 		<data>
-		r+1Em3K2l3UCv32Fc8mUv22WsMY=
+		XCQDD4akXDuoDAiRhGvnb74XgpM=
 		</data>
 		<key>Headers/MTWristbandBroadcast.h</key>
 		<data>
-		J4HSyV374tXiP73xcdc3syp+3Uw=
+		u0GsHW4mgT28LhDSAQsLAlM/H4U=
 		</data>
 		<key>Headers/MTWristbandCentralManager.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/MTWristbandConnection.h</key>
 		<data>
-		A7tYDGTDCk8oq63yr/pSKKNxp2U=
+		GdjlFe0YxwzglKzsNqMx6uSbCqE=
 		</data>
 		<key>Headers/MTWristbandKit.h</key>
 		<data>
-		o6xCzFq/4SYiTioVHhkfKurvUcY=
+		ZTUquoJTxnKm1AGIszZJXzP63YE=
 		</data>
 		<key>Headers/MTWristbandPeripheral.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3hyh1RQwLr0g0HcmYiHKRqrNPJ8=
+		9hDZ98rL6Ykxry31OkHQvIZI5HI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,22 +47,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r+1Em3K2l3UCv32Fc8mUv22WsMY=
+			XCQDD4akXDuoDAiRhGvnb74XgpM=
 			</data>
 			<key>hash2</key>
 			<data>
-			K2nz3vfsQ1IwzAbVcZpBha7puZ8Zv1QP5yPVLWeYACs=
+			zMZQZ2Qr+j5xqMNHKXtOE7chpwSunWacL6AZVpjgJ4E=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandBroadcast.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J4HSyV374tXiP73xcdc3syp+3Uw=
+			u0GsHW4mgT28LhDSAQsLAlM/H4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			in4gLkrTv2Xa4iFBVDtVHzA7F7auiiVJ95Tg2n5YhA4=
+			n73/63jOSwgg44l3qCLLGRk0G6IYKCRIswNNszzPi5U=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandCentralManager.h</key>
@@ -80,22 +80,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A7tYDGTDCk8oq63yr/pSKKNxp2U=
+			GdjlFe0YxwzglKzsNqMx6uSbCqE=
 			</data>
 			<key>hash2</key>
 			<data>
-			LSZgM3RntAypwpQKhEZbRmjIBkYHCqFiWdKmmHmMfv8=
+			DfkNn40ppISeEoAH0VhuVlxb1iltCEI4It8qrx3OREM=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			o6xCzFq/4SYiTioVHhkfKurvUcY=
+			ZTUquoJTxnKm1AGIszZJXzP63YE=
 			</data>
 			<key>hash2</key>
 			<data>
-			w1YwXvidHT4biMcuVuJB1bHWeqCBQ3k4gAlJX1GSASs=
+			0nszdSf6Sft69zvKQtHSwjxIm0eca5gw1uBOWiqyYCU=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandPeripheral.h</key>

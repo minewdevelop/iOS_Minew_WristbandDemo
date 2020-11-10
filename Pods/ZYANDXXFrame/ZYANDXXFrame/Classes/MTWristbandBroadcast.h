@@ -39,6 +39,18 @@ NS_ASSUME_NONNULL_BEGIN
 //history number
 @property (nonatomic, assign, readonly) int totalNum;
 
+//tempHistory number
+@property (nonatomic, assign, readonly) int tempTotalNum;
+
+//versionType 1:hardwareVersion V1;2:hardwareVersion V2
+@property (nonatomic, assign, readonly) int versionType;
+
+//usage 2:firmwareVersion V1;3:firmwareVersion V2
+@property (nonatomic, assign, readonly) int usage;
+
+//temp
+@property (nonatomic, assign, readonly) double temp;
+
 @end
 
 NS_ASSUME_NONNULL_END
