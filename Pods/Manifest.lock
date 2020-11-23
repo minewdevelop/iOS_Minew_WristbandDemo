@@ -1,16 +1,16 @@
 PODS:
-  - ZYANDXXFrame (0.1.1)
+  - MTWristbandKit (1.0.0)
 
 DEPENDENCIES:
-  - ZYANDXXFrame (~> 0.1.1)
+  - MTWristbandKit
 
 SPEC REPOS:
   trunk:
-    - ZYANDXXFrame
+    - MTWristbandKit
 
 SPEC CHECKSUMS:
-  ZYANDXXFrame: e3f5ebc678ee6c157c68feae2a09d1614fc4d366
+  MTWristbandKit: 1e4faba4f13b73de1928b15bcb0978269179d4a4
 
-PODFILE CHECKSUM: 7c4db55be13c1e3eaafcc131f199a4e328060d0c
+PODFILE CHECKSUM: dd736392761500916cc6144ccc0a9ef129d44b2d
 
 COCOAPODS: 1.10.0

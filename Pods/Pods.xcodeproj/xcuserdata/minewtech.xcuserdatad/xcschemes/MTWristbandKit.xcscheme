@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4B60546DD04269EF1AABF16FA60D640"
-               BuildableName = "ZYANDXXFrame"
-               BlueprintName = "ZYANDXXFrame"
+               BlueprintIdentifier = "6B22A05AA8F1ACB38267AABFFAEAE0EE"
+               BuildableName = "MTWristbandKit"
+               BlueprintName = "MTWristbandKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

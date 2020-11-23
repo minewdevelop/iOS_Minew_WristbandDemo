@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## ZYANDXXFrame
+## MTWristbandKit
 
 Copyright (c) 2020 xxdeer <452795508@qq.com>
 
