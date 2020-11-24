@@ -124,6 +124,7 @@
         }
     }];
 }
+#pragma mark *******************************writePassword
 
 - (void)writePassword:(MTWristbandPeripheral *)device {
     NSData *da = [MTUtils verficationPassword:@"minew123"];
@@ -147,6 +148,7 @@
         }
     }];
 }
+#pragma mark *******************************readWarningHistory
 
 - (void)readWarningHistory:(MTWristbandPeripheral *)per {
     NSData *da = [MTUtils readWarningHistoryWithBegain:0 End:per.broadcast.totalNum-1];
@@ -177,6 +179,7 @@
         }
     }];
 }
+#pragma mark *******************************readTempHistory
 
 - (void)readTempHistory:(MTWristbandPeripheral *)per {
     NSData *da = [MTUtils readTempHistoryWithBegain:0 End:per.broadcast.tempTotalNum-1];
@@ -207,6 +210,7 @@
         }
     }];
 }
+#pragma mark *******************************reset
 
 - (void)reset:(MTWristbandPeripheral *)per {
     NSData *da = [MTUtils resetDevice];
@@ -228,6 +232,7 @@
         }
     }];
 }
+#pragma mark *******************************setPowerOff
 
 - (void)setPowerOff:(MTWristbandPeripheral *)per {
     NSData *da = [MTUtils setPowerOff];
@@ -246,6 +251,190 @@
         }
         else {
             NSLog(@"setPowerOff failed,error:%hhu",value);
+        }
+    }];
+}
+
+#pragma mark *******************************setIsStorageData
+
+- (void)setIsStorageData:(MTWristbandPeripheral *)per isStorage:(BOOL)isStorage {
+    NSData *da = [MTUtils setIsStorageData:isStorage];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setIsStorageData success!");
+        }else {
+            NSLog(@"write setIsStorageData failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setIsStorageData successfully");
+        }
+        else {
+            NSLog(@"setIsStorageData failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************readAlarmDistance
+
+- (void)readAlarmDistance:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readAlarmDistance];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readAlarmDistance success!");
+        }else {
+            NSLog(@"write readAlarmDistance failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"readAlarmDistance successfully");
+        }
+        else {
+            NSLog(@"readAlarmDistance failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************setAlarmDistance
+
+- (void)setAlarmDistance:(MTWristbandPeripheral *)per level:(int)level {
+    NSData *da = [MTUtils setAlarmDistance:level];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setAlarmDistance success!");
+        }else {
+            NSLog(@"write setAlarmDistance failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setAlarmDistance successfully");
+        }
+        else {
+            NSLog(@"setAlarmDistance failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************readAlarmTemperature
+
+- (void)readAlarmTemperature:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readAlarmTemperature];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readAlarmTemperature success!");
+        }else {
+            NSLog(@"write readAlarmTemperature failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"readAlarmTemperature successfully");
+        }
+        else {
+            NSLog(@"readAlarmTemperature failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************setAlarmTemperature
+
+- (void)setAlarmTemperature:(MTWristbandPeripheral *)per temp:(double)temp {
+    NSData *da = [MTUtils setAlarmTemperature:temp];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setAlarmTemperature success!");
+        }else {
+            NSLog(@"write setAlarmTemperature failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setAlarmTemperature successfully");
+        }
+        else {
+            NSLog(@"setAlarmTemperature failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************readTemperatureInterval
+
+- (void)readTemperatureInterval:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readTemperatureInterval];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readTemperatureInterval success!");
+        }else {
+            NSLog(@"write readTemperatureInterval failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"readTemperatureInterval successfully");
+        }
+        else {
+            NSLog(@"readTemperatureInterval failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************setReadTemperatureInterval
+
+- (void)setReadTemperatureInterval:(MTWristbandPeripheral *)per interval:(int)interval {
+    NSData *da = [MTUtils setReadTemperatureInterval:interval];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setReadTemperatureInterval success!");
+        }else {
+            NSLog(@"write setReadTemperatureInterval failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setReadTemperatureInterval successfully");
+        }
+        else {
+            NSLog(@"setReadTemperatureInterval failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************ota
+
+- (void)ota:(MTWristbandPeripheral *)per {
+    NSData *targetData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PS2009_NV900_20201029_debug_b8_ota_v3_2_3" ofType:@".bin"]];
+    NSArray *otaDaAry = [MTUtils ota:targetData];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (NSInteger k = 0; k<otaDaAry.count; k++) {
+            [per.connector writeData:otaDaAry[k] completion:^(BOOL success, NSError * _Nonnull error) {
+                if (success) {
+                    NSLog(@"write ota success!");
+                }else {
+                    NSLog(@"write ota failed!");
+                }
+            }];
+            [NSThread sleepForTimeInterval:0.02];
+        }
+    });
+    
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"ota successfully");
+        }
+        else {
+            NSLog(@"ota  failed,error:%hhu",value);
         }
     }];
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17241BB7D7C3C2F1CB67A3DA /* Pods_MTWristbandDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD065CB49C8D2E42B8429BF0 /* Pods_MTWristbandDemo.framework */; };
+		6A4B5E11256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 6A4B5E10256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin */; };
 		6A80986624CAB9A500F7AA53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80986524CAB9A500F7AA53 /* AppDelegate.m */; };
 		6A80986C24CAB9A500F7AA53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80986B24CAB9A500F7AA53 /* ViewController.m */; };
 		6A80986F24CAB9A500F7AA53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A80986D24CAB9A500F7AA53 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		10F0B8C17CDF53FD423D5F3C /* Pods-MTWristbandDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTWristbandDemo.release.xcconfig"; path = "Target Support Files/Pods-MTWristbandDemo/Pods-MTWristbandDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6A4B5E10256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin; sourceTree = "<group>"; };
 		6A80986124CAB9A500F7AA53 /* MTWristbandDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTWristbandDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A80986424CAB9A500F7AA53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A80986524CAB9A500F7AA53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		6A80985824CAB9A500F7AA53 = {
 			isa = PBXGroup;
 			children = (
+				6A4B5E10256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin */,
 				6A80986324CAB9A500F7AA53 /* MTWristbandDemo */,
 				6A80986224CAB9A500F7AA53 /* Products */,
 				6A80988124CABD7400F7AA53 /* Frameworks */,
@@ -174,6 +177,7 @@
 			files = (
 				6A80987424CAB9A700F7AA53 /* LaunchScreen.storyboard in Resources */,
 				6A80987124CAB9A700F7AA53 /* Assets.xcassets in Resources */,
+				6A4B5E11256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin in Resources */,
 				6A80986F24CAB9A500F7AA53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
