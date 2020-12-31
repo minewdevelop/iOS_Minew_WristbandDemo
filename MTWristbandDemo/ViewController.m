@@ -409,6 +409,96 @@
         }
     }];
 }
+#pragma mark *******************************setDeviceVibration
+
+- (void)setDeviceVibration:(MTWristbandPeripheral *)per isOn:(BOOL)isOn {
+    NSData *da = [MTUtils setDeviceVibration:isOn];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setDeviceVibration success!");
+        }else {
+            NSLog(@"write setDeviceVibration failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setDeviceVibration successfully");
+        }
+        else {
+            NSLog(@"setDeviceVibration failed,error:%hhu",value);
+        }
+    }];
+}
+
+#pragma mark *******************************readDeviceVibration
+
+- (void)readDeviceVibration:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readDeviceVibration];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readDeviceVibration success!");
+        }else {
+            NSLog(@"write readDeviceVibration failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"readDeviceVibration successfully");
+        }
+        else {
+            NSLog(@"readDeviceVibration failed,error:%hhu",value);
+        }
+    }];
+}
+#pragma mark *******************************setDeviceTempVibration
+
+- (void)setDeviceTempVibration:(MTWristbandPeripheral *)per temp:(double)temp {
+    NSData *da = [MTUtils setDeviceTempVibration:temp];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write setDeviceTempVibration success!");
+        }else {
+            NSLog(@"write setDeviceTempVibration failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"setDeviceTempVibration successfully");
+        }
+        else {
+            NSLog(@"setDeviceTempVibration failed,error:%hhu",value);
+        }
+    }];
+}
+
+#pragma mark *******************************readDeviceTempVibration
+
+- (void)readDeviceTempVibration:(MTWristbandPeripheral *)per {
+    NSData *da = [MTUtils readDeviceTempVibration];
+    [per.connector writeData:da completion:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"write readDeviceTempVibration success!");
+        }else {
+            NSLog(@"write readDeviceTempVibration failed!");
+        }
+    }];
+    [per.connector didReceiveData:^(NSData * _Nonnull data) {
+        uint8_t value = 0;
+        [data getBytes:&value length:1];
+        if (data && value == 0) {
+            NSLog(@"readDeviceTempVibration successfully");
+        }
+        else {
+            NSLog(@"readDeviceTempVibration failed,error:%hhu",value);
+        }
+    }];
+}
 #pragma mark *******************************ota
 
 - (void)ota:(MTWristbandPeripheral *)per {

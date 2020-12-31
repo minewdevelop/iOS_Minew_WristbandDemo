@@ -79,6 +79,27 @@ Set the temperature measurement interval.
 */
 + (NSData *)setReadTemperatureInterval:(int)time;
 /**
+Set the vibrating  of the device.
+ 
+ @param isOn the isOn is YES, device can  vibrating; the isOn is NO, device can't be vibrating
+*/
++ (NSData *)setDeviceVibration:(BOOL)isOn;
+/**
+Read the vibrating  of the device.
+*/
++ (NSData *)readDeviceVibration;
+/**
+Set vibration temperature threshold  of the device.
+ 
+ @param temp the number of vibration temperature which you want.(30.0-36.0)℃
+*/
++ (NSData *)setDeviceTempVibration:(double)temp;
+/**
+Read vibration temperature threshold  of the device.
+*/
++ (NSData *)readDeviceTempVibration;
+
+/**
 Reset device.
 Only clean flash card information.
 */

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MTUtils.h</key>
 		<data>
-		XCQDD4akXDuoDAiRhGvnb74XgpM=
+		Gw1gv3VngWIh/SSx1YISyxTCWTE=
 		</data>
 		<key>Headers/MTWristbandBroadcast.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PI7BwoqTpM5V1Oopt5hVqN0Xbnc=
+		SGNv+cYzYsrUvqWW3BRMULVEvh4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,11 +47,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XCQDD4akXDuoDAiRhGvnb74XgpM=
+			Gw1gv3VngWIh/SSx1YISyxTCWTE=
 			</data>
 			<key>hash2</key>
 			<data>
-			zMZQZ2Qr+j5xqMNHKXtOE7chpwSunWacL6AZVpjgJ4E=
+			veN9xPJDq3MMepbuCQsDSs3hszBkp9LSPToe6aqItVA=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandBroadcast.h</key>

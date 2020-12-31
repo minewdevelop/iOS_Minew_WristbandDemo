@@ -16,6 +16,7 @@
 		6A80987424CAB9A700F7AA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A80987224CAB9A700F7AA53 /* LaunchScreen.storyboard */; };
 		6A80987724CAB9A700F7AA53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80987624CAB9A700F7AA53 /* main.m */; };
 		6A80988724DBD6F100F7AA53 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80988624DBD6F100F7AA53 /* MyTableViewCell.m */; };
+		6AE577F9259B1C91008908CA /* MTWristbandKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE577F8259B1C91008908CA /* MTWristbandKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		6A80987624CAB9A700F7AA53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A80988524DBD6F100F7AA53 /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		6A80988624DBD6F100F7AA53 /* MyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		6AE577F8259B1C91008908CA /* MTWristbandKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTWristbandKit.framework; sourceTree = SOURCE_ROOT; };
 		7371C8F93A8A0C0A72754065 /* Pods-MTWristbandDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTWristbandDemo.debug.xcconfig"; path = "Target Support Files/Pods-MTWristbandDemo/Pods-MTWristbandDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD065CB49C8D2E42B8429BF0 /* Pods_MTWristbandDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTWristbandDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17241BB7D7C3C2F1CB67A3DA /* Pods_MTWristbandDemo.framework in Frameworks */,
+				6AE577F9259B1C91008908CA /* MTWristbandKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +87,7 @@
 		6A80986324CAB9A500F7AA53 /* MTWristbandDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6AE577F8259B1C91008908CA /* MTWristbandKit.framework */,
 				6A80986424CAB9A500F7AA53 /* AppDelegate.h */,
 				6A80986524CAB9A500F7AA53 /* AppDelegate.m */,
 				6A80986A24CAB9A500F7AA53 /* ViewController.h */,

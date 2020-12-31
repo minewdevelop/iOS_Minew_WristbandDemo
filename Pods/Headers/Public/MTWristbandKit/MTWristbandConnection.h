@@ -1,1 +1,0 @@
-../../../MTWristbandKit/MTWristbandKit/Classes/MTWristbandConnection.h
