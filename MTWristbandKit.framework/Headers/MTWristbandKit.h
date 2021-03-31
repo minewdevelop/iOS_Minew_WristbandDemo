@@ -11,4 +11,4 @@
 #import <MTWristbandKit/MTWristbandPeripheral.h>
 #import <MTWristbandKit/MTWristbandConnection.h>
 #import <MTWristbandKit/MTWristbandBroadcast.h>
-#import <MTWristbandKit/MTUtils.h>
+#import <MTWristbandKit/MTCommand.h>
