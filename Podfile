@@ -6,5 +6,4 @@ target 'MTWristbandDemo' do
   use_frameworks!
 
   # Pods for MTWristbandDemo
-  pod 'MTWristbandKit'
 end

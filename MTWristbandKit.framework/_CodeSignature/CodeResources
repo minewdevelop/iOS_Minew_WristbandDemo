@@ -4,9 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/MTUtils.h</key>
+		<key>Headers/MTCommand.h</key>
 		<data>
-		XCQDD4akXDuoDAiRhGvnb74XgpM=
+		pdWq9CbAkv46gjQnePH7uHe/n2c=
 		</data>
 		<key>Headers/MTWristbandBroadcast.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/MTWristbandConnection.h</key>
 		<data>
-		GdjlFe0YxwzglKzsNqMx6uSbCqE=
+		sqx/WXYp5435Sgl1VBlARZiMaKQ=
 		</data>
 		<key>Headers/MTWristbandKit.h</key>
 		<data>
-		ZTUquoJTxnKm1AGIszZJXzP63YE=
+		2kmobS4By2vFN4Iwh69uVO9pBaY=
 		</data>
 		<key>Headers/MTWristbandPeripheral.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PI7BwoqTpM5V1Oopt5hVqN0Xbnc=
+		LWm3xq1rzsBdxtjBLp9addkwOpM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,15 +43,15 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/MTUtils.h</key>
+		<key>Headers/MTCommand.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XCQDD4akXDuoDAiRhGvnb74XgpM=
+			pdWq9CbAkv46gjQnePH7uHe/n2c=
 			</data>
 			<key>hash2</key>
 			<data>
-			zMZQZ2Qr+j5xqMNHKXtOE7chpwSunWacL6AZVpjgJ4E=
+			FQ8bxGQ7ZvdAhoVDdFn3Q2wGxtfilNzyoeXV/ZDou4U=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandBroadcast.h</key>
@@ -80,22 +80,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GdjlFe0YxwzglKzsNqMx6uSbCqE=
+			sqx/WXYp5435Sgl1VBlARZiMaKQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			DfkNn40ppISeEoAH0VhuVlxb1iltCEI4It8qrx3OREM=
+			V9hp7owaqP534NO/Juive2eqSKyQA7DP+tFGDa4buC4=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZTUquoJTxnKm1AGIszZJXzP63YE=
+			2kmobS4By2vFN4Iwh69uVO9pBaY=
 			</data>
 			<key>hash2</key>
 			<data>
-			0nszdSf6Sft69zvKQtHSwjxIm0eca5gw1uBOWiqyYCU=
+			idKI+OlGYlm6J9tFWhs+uIoQn/HngeYFKIiYOeZItc0=
 			</data>
 		</dict>
 		<key>Headers/MTWristbandPeripheral.h</key>

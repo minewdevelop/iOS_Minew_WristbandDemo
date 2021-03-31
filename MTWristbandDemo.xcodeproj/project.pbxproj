@@ -16,6 +16,8 @@
 		6A80987424CAB9A700F7AA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A80987224CAB9A700F7AA53 /* LaunchScreen.storyboard */; };
 		6A80987724CAB9A700F7AA53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80987624CAB9A700F7AA53 /* main.m */; };
 		6A80988724DBD6F100F7AA53 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A80988624DBD6F100F7AA53 /* MyTableViewCell.m */; };
+		6AE577F9259B1C91008908CA /* MTWristbandKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE577F8259B1C91008908CA /* MTWristbandKit.framework */; };
+		6AE5786325BA7247008908CA /* PS2059_NV900_20210115_debug_b8_custom_ota_v3_2_5.bin in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5786225BA7247008908CA /* PS2059_NV900_20210115_debug_b8_custom_ota_v3_2_5.bin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		10F0B8C17CDF53FD423D5F3C /* Pods-MTWristbandDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTWristbandDemo.release.xcconfig"; path = "Target Support Files/Pods-MTWristbandDemo/Pods-MTWristbandDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6A0E18F02614803C009CD607 /* MTCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCommand.h; path = MTWristbandKit.framework/Headers/MTCommand.h; sourceTree = SOURCE_ROOT; };
 		6A4B5E10256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin; sourceTree = "<group>"; };
 		6A80986124CAB9A500F7AA53 /* MTWristbandDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTWristbandDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A80986424CAB9A500F7AA53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +49,13 @@
 		6A80987624CAB9A700F7AA53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A80988524DBD6F100F7AA53 /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		6A80988624DBD6F100F7AA53 /* MyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		6AE577F8259B1C91008908CA /* MTWristbandKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTWristbandKit.framework; sourceTree = SOURCE_ROOT; };
+		6AE5785C25BA7205008908CA /* MTWristbandConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTWristbandConnection.h; path = MTWristbandKit.framework/Headers/MTWristbandConnection.h; sourceTree = SOURCE_ROOT; };
+		6AE5785D25BA7205008908CA /* MTWristbandBroadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTWristbandBroadcast.h; path = MTWristbandKit.framework/Headers/MTWristbandBroadcast.h; sourceTree = SOURCE_ROOT; };
+		6AE5785F25BA7205008908CA /* MTWristbandCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTWristbandCentralManager.h; path = MTWristbandKit.framework/Headers/MTWristbandCentralManager.h; sourceTree = SOURCE_ROOT; };
+		6AE5786025BA7205008908CA /* MTWristbandKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTWristbandKit.h; path = MTWristbandKit.framework/Headers/MTWristbandKit.h; sourceTree = SOURCE_ROOT; };
+		6AE5786125BA7205008908CA /* MTWristbandPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTWristbandPeripheral.h; path = MTWristbandKit.framework/Headers/MTWristbandPeripheral.h; sourceTree = SOURCE_ROOT; };
+		6AE5786225BA7247008908CA /* PS2059_NV900_20210115_debug_b8_custom_ota_v3_2_5.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = PS2059_NV900_20210115_debug_b8_custom_ota_v3_2_5.bin; sourceTree = "<group>"; };
 		7371C8F93A8A0C0A72754065 /* Pods-MTWristbandDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTWristbandDemo.debug.xcconfig"; path = "Target Support Files/Pods-MTWristbandDemo/Pods-MTWristbandDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD065CB49C8D2E42B8429BF0 /* Pods_MTWristbandDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTWristbandDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17241BB7D7C3C2F1CB67A3DA /* Pods_MTWristbandDemo.framework in Frameworks */,
+				6AE577F9259B1C91008908CA /* MTWristbandKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,7 @@
 		6A80985824CAB9A500F7AA53 = {
 			isa = PBXGroup;
 			children = (
+				6AE5786225BA7247008908CA /* PS2059_NV900_20210115_debug_b8_custom_ota_v3_2_5.bin */,
 				6A4B5E10256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin */,
 				6A80986324CAB9A500F7AA53 /* MTWristbandDemo */,
 				6A80986224CAB9A500F7AA53 /* Products */,
@@ -84,6 +96,13 @@
 		6A80986324CAB9A500F7AA53 /* MTWristbandDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6A0E18F02614803C009CD607 /* MTCommand.h */,
+				6AE5785D25BA7205008908CA /* MTWristbandBroadcast.h */,
+				6AE5785F25BA7205008908CA /* MTWristbandCentralManager.h */,
+				6AE5785C25BA7205008908CA /* MTWristbandConnection.h */,
+				6AE5786025BA7205008908CA /* MTWristbandKit.h */,
+				6AE5786125BA7205008908CA /* MTWristbandPeripheral.h */,
+				6AE577F8259B1C91008908CA /* MTWristbandKit.framework */,
 				6A80986424CAB9A500F7AA53 /* AppDelegate.h */,
 				6A80986524CAB9A500F7AA53 /* AppDelegate.m */,
 				6A80986A24CAB9A500F7AA53 /* ViewController.h */,
@@ -176,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A80987424CAB9A700F7AA53 /* LaunchScreen.storyboard in Resources */,
+				6AE5786325BA7247008908CA /* PS2059_NV900_20210115_debug_b8_custom_ota_v3_2_5.bin in Resources */,
 				6A80987124CAB9A700F7AA53 /* Assets.xcassets in Resources */,
 				6A4B5E11256D115F0098E1BD /* PS2009_NV900_20201029_debug_b8_ota_v3_2_3.bin in Resources */,
 				6A80986F24CAB9A500F7AA53 /* Main.storyboard in Resources */,

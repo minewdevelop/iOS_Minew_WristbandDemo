@@ -21,12 +21,6 @@ typedef NS_ENUM(NSUInteger, Connection) {
 };
 @class MTWristbandPeripheral;
 
-typedef void(^MTPasswordBlock)(NSString *password);
-
-typedef void(^MTCOperationBlock)(BOOL success, NSError *error);
-
-typedef void(^WriteCompletion)(BOOL success, NSError *error);
-typedef void(^ReceiveCompletion)(NSData *data);
 typedef void(^ConnectionChangeCompletion)(Connection connection);
 
 @interface MTWristbandConnection : NSObject
@@ -38,20 +32,6 @@ typedef void(^ConnectionChangeCompletion)(Connection connection);
  current connection status.
  */
 @property (nonatomic, readonly, assign) Connection connection;
-/**
- Send data to the device
- 
- @param data the sending data.
- @param handler writing completion callback, success == YES means send successfully.
- */
-- (void)writeData:(NSData *)data completion:(WriteCompletion)handler;
-
-/**
- Received data from device.
- !!! this is a callback method, please listen to the block, it will execute when receiving data from device.
- @param completionHandler the receiving completion block.
- */
-- (void)didReceiveData:(ReceiveCompletion)completionHandler;
 
 /**
  listen the changes of connection.
